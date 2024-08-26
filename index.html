@@ -1,0 +1,39 @@
+<html>
+<head>
+<title>Image Generator Wizard</title>
+</head>
+<body>
+
+<script>
+function show_info() {
+	alert('Info\nHvad skal jeg sige? Se instrukserne og se hvad der sker!\nHvis den har vist dig denne side igen, er det nok fordi du har givet den et forkert input.\nCheck at filerne er de rigtige steder, og at der kun er en fil i generer_billede mappen (At beholde output filen er en almindelig fejl).');
+}
+</script>
+
+<h1 align="center">Image Generator Wizard</h1>
+<a href="#" onclick="show_info()">Info</a><br>
+<br>
+
+<p style="color: red"><!--error--></p>
+
+<br>
+
+Kig i din hjemmemappe. Der finder du en mappe kaldet "generer_billede". I den skal du l&aelig;gge det store billede som skal bruges som "skabelon" for det endelige billede<br>
+Inden i mappen generer_billede finder du en anden mappe kaldet "mindre_billeder". I den skal du l&aelig;gge de mindre billede som det store billede skal best&aring; af.<br>
+Derudover skal du v&aelig;lge nogle konfigurationer herunder:
+Herefter skal du bare trykke p&aring; "Go!"-knappen og vente (Det kan tage op til flere minutter).<br>
+Note: De billeder du l&aelig;gger i mindre_billeder mappen b&oring;r v&aelig;re nogenlunde kvadratiske. Ellers ser de meget m&aelig;rkelige ud bagefter.<br>
+
+<form method=GET action="http://localhost:8080">
+<label>
+St&oslash;relsen p&aring; de sm&aring; billeder:
+<input type=number min=0 step=5 value=35 name=size>
+</label><br>
+<label>
+Navnet p&aring; output billedet:
+<input type=text value=output.jpg placeholder="Output billedets navn" name=output><br>
+<input type=submit value="Go!">
+</form>
+
+</body>
+</html>
